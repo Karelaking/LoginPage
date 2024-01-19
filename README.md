@@ -1,5 +1,5 @@
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](assets/LOGIN_LOG.png)
 
 
 # Hi, I'm White Angel! 👋
@@ -9,14 +9,14 @@
 I'm a developer and a student...
 
 
-# Unit Converter
+# Login Page
 
-This is simple Unit Converter Application build in python programming language.
+This is simple Login Page Application build in python programming language.
 
 
 ## Installation
 
-**Install Unit Converter from Github.**
+**Install Login Page from Github.**
 
 Install python from https://www.python.org/downloads/
 
@@ -27,12 +27,12 @@ you can skip this step if you have already installed the python and git.
 
 - **clone Project to your local computer.**
 ```bash
-  git clone https://github.com/Karelaking/Unit_Coverter.git
+  git clone https://github.com/Karelaking/LoginPage.git
 ```
 
 - **Go to the project folder**
 ```bash
-cd Unit Coverter
+cd LoginPage
 ```
 
 - **install requirements for the unit converter**
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 - **Run Unit_Coverter.py**
 ```bash
-python3 Unit_Coverter.py
+python3 Login.py
 ```
 ## License
 

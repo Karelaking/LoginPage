@@ -1,5 +1,6 @@
 from tkinter import *
 import customtkinter as ttk
+from firebase import Username, Password
 
 page = ttk.CTk()
 page.title("Login")
@@ -15,18 +16,18 @@ img = load_img.subsample(2, 2)
 Label(page, image=load_img, width=700).pack(side=LEFT, fill=Y)
 
 
-def userfunc(e):
+def userFunc(e):
     if userName.get() != "":
         pass
     else:
-        userName.insert(0,"Enter User Name")
+        userName.insert(0, "Enter User Name")
 
 
-def passwordfunc(e):
+def passwordFunc(e):
     if password.get() != "":
         pass
     else:
-        password.insert(0,"Enter Password")
+        password.insert(0, "Enter Password")
 
 
 frame = ttk.CTkFrame(page)
@@ -35,24 +36,24 @@ userName = ttk.CTkEntry(frame, width=350, height=45)
 userName.pack(pady=5, padx=42)
 userName.insert(0, "Enter User Name")
 userName.bind("<FocusIn>", lambda e: userName.delete(0, 'end'))
-userName.bind("<FocusOut>", userfunc)
+userName.bind("<FocusOut>", userFunc)
 password = ttk.CTkEntry(frame, width=350, height=45)
 password.pack(pady=5, padx=42)
 password.insert(0, "Enter Password")
 password.bind("<FocusIn>", lambda e: password.delete(0, 'end'))
-password.bind("<FocusOut>", passwordfunc)
+password.bind("<FocusOut>", passwordFunc)
 
 
 def Login():
-    if userName.get() == "mradul kumar" and password.get() == "1234":
+    if userName.get() == Username and int(password.get()) == Password:
         print("logged in")
-        userName.insert(0,"Enter User Name")
-        password.insert(0,"Enter Password")
-    elif userName.get() == "mradul kumar" and password.get() != "1234":
+        userName.insert(0, "Enter User Name")
+        password.insert(0, "Enter Password")
+    elif userName.get() == Username and int(password.get()) != Password:
         print("incorrect password")
-    elif userName.get() != "mradul kumar" and password.get() == "1234":
+    elif userName.get() != Username and int(password.get()) == Password:
         print("incorrect user name")
-    elif userName.get() != "mradul kumar" and password.get() != "1234":
+    elif userName.get() != Username and int(password.get()) != Password:
         print("incorrect user name and password")
 
 
